@@ -1,0 +1,189 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="canonical" href="/article.html">
+    <link rel="shortcut icon" href="amp_favicon.png">
+
+    <title>Mega menu</title>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+
+    <script type="application/ld+json">
+    {
+     "@context": "http://schema.org",
+     "@type": "NewsArticle",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"https://example.com/my-article.html"
+     },
+     "headline": "My First AMP Article",
+     "image": {
+       "@type": "ImageObject",
+       "url": "https://example.com/article_thumbnail1.jpg",
+       "height": 800,
+       "width": 800
+     },
+     "datePublished": "2015-02-05T08:00:00+08:00",
+     "dateModified": "2015-02-05T09:20:00+08:00",
+     "author": {
+       "@type": "Person",
+       "name": "John Doe"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "⚡ AMP Times",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "https://example.com/amptimes_logo.jpg",
+         "width": 600,
+         "height": 60
+       }
+     },
+     "description": "My first experience in an AMPlified world"
+    }
+    </script>
+    <style amp-custom>
+      body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .hidden{
+        visibility: hidden;
+      }
+      .display-block{
+        display: block;
+      }
+      .display-none{
+        display: none;
+      }
+      .visible{
+        visibility: visible;
+      }
+      .relative {
+        position: relative;
+      }
+      .wrapper {
+        position: relative;
+        clear: both;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      #mega-menu div[role=list]{
+        display: flex;
+      }
+      #mega-menu div[role=list]>div[role=listitem]{
+        line-height: 40px;
+      }
+
+      .align-items-center {
+        align-items: center;
+      }
+      .cursor-pointer{
+        cursor: pointer;
+      }
+      .prod {
+        background: #f2f2f2;
+      }
+
+      /* For category level 0*/
+
+      .icon-electronics{
+        width: 28px;
+        height: 28px;
+        background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-70706374aa.png) 0 -505px/28px 591px;
+      }
+
+      .icon-fashion {
+        width: 28px;
+        height: 28px;
+        background: url(https://d1vfs9f7h1rfk4.cloudfront.net/build//images/sprites/common/global-icons-2x-70706374aa.png) 0 -476px/28px 591px;
+      }
+
+    </style>
+  </head>
+  <body>
+  <amp-state id="data">
+    <script type="application/json">
+      {
+        "displayMenu": false,
+        "selectedCategory": "",
+      }
+    </script>
+  </amp-state>
+  <template type="amp-mustache"
+            id="sub-menu-template">
+    <div>
+    <strong>{{title}}</strong>
+      <div class="sub-menu"></div>
+      {{#subMenu}}
+          <div>
+            {{title}}
+          </div>
+      {{/subMenu}}
+    </div>
+  </template>
+  <div id="mega-menu" class="relative prod wrapper ">
+    <div class="flex">
+      <div role="button" tabindex="1" on="tap:AMP.setState({data:{ selectedCategory: 'electronics', displayMenu: true, loadElectronics: true}})">
+        <a class="flex align-items-center cursor-pointer">
+          <i class="icon-electronics"></i>
+          <strong>Electronics</strong>
+        </a>
+      </div>
+      <div role="button" tabindex="2" on="tap:AMP.setState({data :{ selectedCategory: 'fashion', displayMenu: true, loadFashion: true}})">
+        <a class="flex align-items-center cursor-pointer">
+          <i class="icon-fashion"></i>
+          <strong>Fashion</strong>
+        </a>
+      </div>
+    </div>
+    <div class="sub-menu hidden" [class]="data.displayMenu ? 'sub-menu visible': 'sub-menu hidden'">
+      <div [class]="data.selectedCategory == 'electronics' ? 'display-block': 'display-none'">
+        <amp-list width="auto"
+                  height="100"
+                  layout="fixed-height"
+                  src="/nomenu"
+                  [src]="data.loadElectronics? '/menu/electronics' : '/nomenu'"
+                  template="sub-menu-template"
+                  class="m1">
+        </amp-list>
+      </div>
+      <div [class]="data.selectedCategory == 'fashion' ? 'display-block': 'display-none'">
+        <amp-list width="auto"
+                  height="100"
+                  layout="fixed-height"
+                  src="/nomenu"
+                  [src]="data.loadFashion? '/menu/fashion' : '/nomenu'"
+                  template="sub-menu-template"
+                  class="m1">
+        </amp-list>
+      </div>
+
+    </div>
+
+  </div>
+
+  </body>
+</html>
