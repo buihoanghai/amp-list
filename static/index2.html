@@ -17,7 +17,7 @@
 <!doctype html>
 <html ⚡ lang="en">
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
     <link rel="canonical" href="/article.html">
@@ -25,65 +25,7 @@
 
     <title>AMP List</title>
 
-    <style amp-boilerplate>body {
-        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        animation: -amp-start 8s steps(1, end) 0s 1 normal both
-    }
-
-    @-webkit-keyframes -amp-start {
-        from {
-            visibility: hidden
-        }
-        to {
-            visibility: visible
-        }
-    }
-
-    @-moz-keyframes -amp-start {
-        from {
-            visibility: hidden
-        }
-        to {
-            visibility: visible
-        }
-    }
-
-    @-ms-keyframes -amp-start {
-        from {
-            visibility: hidden
-        }
-        to {
-            visibility: visible
-        }
-    }
-
-    @-o-keyframes -amp-start {
-        from {
-            visibility: hidden
-        }
-        to {
-            visibility: visible
-        }
-    }
-
-    @keyframes -amp-start {
-        from {
-            visibility: hidden
-        }
-        to {
-            visibility: visible
-        }
-    }</style>
-    <noscript>
-        <style amp-boilerplate>body {
-            -webkit-animation: none;
-            -moz-animation: none;
-            -ms-animation: none;
-            animation: none
-        }</style>
-    </noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
@@ -126,7 +68,6 @@
      },
      "description": "My first experience in an AMPlified world"
     }
-
     </script>
     <style amp-custom>
         body {
@@ -135,15 +76,12 @@
             padding: 0;
             text-align: center;
         }
-
-        .main-area {
+        .main-area{
         }
-
-        .hidden {
+        .hidden{
             visibility: hidden;
         }
-
-        .list-compare amp-list {
+        .list-compare amp-list{
             transition: height .5s;
         }
     </style>
@@ -160,10 +98,36 @@
     </section>
     <section expanded>
         <h2>Section 3</h2>
-        <a href="asd.com">
+        <div>
             <amp-carousel height="300"
                           layout="fixed-height"
                           type="carousel">
+                <a href="asd.com">
+                    <div>
+                        <a href="asd.com">
+                            <amp-img src="/img/image1.jpg"
+                                     width="400"
+                                     height="300"
+                                     alt="a sample image"></amp-img>
+
+                        </a>
+                    </div>
+
+                </a>
+
+                <a href="asd.com">
+                    <div>
+                        <a href="asd.com">
+                            <amp-img src="/img/image1.jpg"
+                                     width="400"
+                                     height="300"
+                                     alt="a sample image"></amp-img>
+
+                        </a>
+                    </div>
+
+                </a>
+                <a href="asd.com">
                 <div>
                     <a href="asd.com">
                         <amp-img src="/img/image1.jpg"
@@ -173,25 +137,11 @@
 
                     </a>
                 </div>
-                <div>
-                    <a href="asd.com">
-                        <amp-img src="/img/image2.jpg"
-                                 width="400"
-                                 height="300"
-                                 alt="another sample image"></amp-img>
-                    </a>
-                </div>
-                <div>
-                    <a href="asd.com">
-                        <amp-img src="/img/image3.jpg"
-                                 width="400"
-                                 height="300"
-                                 alt="aaand another sample image"></amp-img>
 
-                    </a>
-                </div>
+            </a>
             </amp-carousel>
-        </a>
+
+        </div>
     </section>
 </amp-accordion>
 <amp-state id="data">
