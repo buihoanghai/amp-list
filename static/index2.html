@@ -17,25 +17,83 @@
 <!doctype html>
 <html ⚡ lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-  <link rel="canonical" href="/article.html">
-  <link rel="shortcut icon" href="amp_favicon.png">
+    <link rel="canonical" href="/article.html">
+    <link rel="shortcut icon" href="amp_favicon.png">
 
-  <title>AMP List</title>
+    <title>AMP List</title>
 
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
 
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
 
-  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-  <script type="application/ld+json">
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }</style>
+    <noscript>
+        <style amp-boilerplate>body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+        }</style>
+    </noscript>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script type="application/ld+json">
     {
      "@context": "http://schema.org",
      "@type": "NewsArticle",
@@ -68,124 +126,141 @@
      },
      "description": "My first experience in an AMPlified world"
     }
+
     </script>
-  <style amp-custom>
-    body {
-      width: auto;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    .main-area{
-    }
-    .hidden{
-      visibility: hidden;
-    }
-    .list-compare amp-list{
-      transition: height .5s;
-    }
-  </style>
+    <style amp-custom>
+        body {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .main-area {
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .list-compare amp-list {
+            transition: height .5s;
+        }
+    </style>
 </head>
 <body>
 <amp-accordion disable-session-states>
-  <section>
-    <h2>Section 1</h2>
-    <p>Content in section 1.</p>
-  </section>
-  <section>
-    <h2>Section 2</h2>
-    <div>Content in section 2.</div>
-  </section>
-  <section expanded>
-    <h2>Section 3</h2>
-    <div>
-      <amp-carousel height="300"
-                    layout="fixed-height"
-                    type="carousel">
-        <amp-img src="/img/image1.jpg"
-                 width="400"
-                 height="300"
-                 alt="a sample image"></amp-img>
-        <amp-img src="/img/image2.jpg"
-                 width="400"
-                 height="300"
-                 alt="another sample image"></amp-img>
-        <amp-img src="/img/image3.jpg"
-                 width="400"
-                 height="300"
-                 alt="aaand another sample image"></amp-img>
-      </amp-carousel>
-    </div>
-  </section>
+    <section>
+        <h2>Section 1</h2>
+        <p>Content in section 1.</p>
+    </section>
+    <section>
+        <h2>Section 2</h2>
+        <div>Content in section 2.</div>
+    </section>
+    <section expanded>
+        <h2>Section 3</h2>
+        <a href="asd.com">
+            <amp-carousel height="300"
+                          layout="fixed-height"
+                          type="carousel">
+                <div>
+                    <a href="asd.com">
+                        <amp-img src="/img/image1.jpg"
+                                 width="400"
+                                 height="300"
+                                 alt="a sample image"></amp-img>
+
+                    </a>
+                </div>
+                <div>
+                    <a href="asd.com">
+                        <amp-img src="/img/image2.jpg"
+                                 width="400"
+                                 height="300"
+                                 alt="another sample image"></amp-img>
+                    </a>
+                </div>
+                <div>
+                    <a href="asd.com">
+                        <amp-img src="/img/image3.jpg"
+                                 width="400"
+                                 height="300"
+                                 alt="aaand another sample image"></amp-img>
+
+                    </a>
+                </div>
+            </amp-carousel>
+        </a>
+    </section>
 </amp-accordion>
 <amp-state id="data">
-  <script type="application/json">
-    {
-      "total": 9,
-      "index": 1,
-      "query": "",
-      "loading": false,
-      "products":[
+    <script type="application/json">
         {
-          "id": 1,
-          "index":1,
-          "name": "tIẾT KIỆM",
-          "urlImage": "http://s1.haivn.com/data/400_314ae746-0e70-443f-bf50-d6488e0203be.jpg"
+            "total": 9,
+            "index": 1,
+            "query": "",
+            "loading": false,
+            "products": [
+                {
+                    "id": 1,
+                    "index": 1,
+                    "name": "tIẾT KIỆM",
+                    "urlImage": "http://s1.haivn.com/data/400_314ae746-0e70-443f-bf50-d6488e0203be.jpg"
+                }
+            ]
         }
-      ]
-    }
-  </script>
+    </script>
 </amp-state>
 
 <template type="amp-mustache"
           id="amp-template-id">
-  <div class="comparison">
+    <div class="comparison">
 
-    <main class="main-area">
-      <h2>{{name}}</h2>
-      <amp-img width="400" height="400" src="{{urlImage}}"></amp-img>
-    </main>
+        <main class="main-area">
+            <h2>{{name}}</h2>
+            <amp-img width="400" height="400" src="{{urlImage}}"></amp-img>
+        </main>
 
 
+        <!--<button-->
+        <!--on="tap:AMP.setState({ data : {index: data.index + 3, loading: true}}),frmData.submit">-->
+        <!--<span [text]="data.total - data.index > 3 ? '3 more': data.total - data.index + ' more'">3 more</span>-->
 
-    <!--<button-->
-    <!--on="tap:AMP.setState({ data : {index: data.index + 3, loading: true}}),frmData.submit">-->
-    <!--<span [text]="data.total - data.index > 3 ? '3 more': data.total - data.index + ' more'">3 more</span>-->
-
-    <!--</button>-->
-  </div>
-  <br>
+        <!--</button>-->
+    </div>
+    <br>
 </template>
 <div class="search">
-  <input on="change:AMP.setState({data:{query: event.value}})">
-  <button on="tap:AMP.setState({data:{index: 1}}), frmData.submit">Search</button>
+    <input on="change:AMP.setState({data:{query: event.value}})">
+    <button on="tap:AMP.setState({data:{index: 1}}), frmData.submit">Search</button>
 </div>
 <form class="hidden" method="post" id="frmData" action-xhr="/products" target="_top"
       on="submit-success:AMP.setState({data:{products: event.response.items, total: event.response.total, loading: false}}),show-more.scrollTo">
-  <input name="index" [value]="data.index">
-  <input name="query" [value]="data.query">
+    <input name="index" [value]="data.index">
+    <input name="query" [value]="data.query">
 
 </form>
 <div class="list-compare">
-  <amp-list width="auto"
-            height="400"
-            layout="fixed-height"
-            [height]="data.loading? '': data.index*500"
-            src="/product"
-            [state] = "data.products"
-            template="amp-template-id"
-            class="m1">
-  </amp-list>
-  <div id="show-more"  [class]="data.total - data.index < 1 ? 'hidden' : ''">
+    <amp-list width="auto"
+              height="400"
+              layout="fixed-height"
+              [height]="data.loading? '': data.index*500"
+              src="/product"
+              [state]="data.products"
+              template="amp-template-id"
+              class="m1">
+    </amp-list>
+    <div id="show-more" [class]="data.total - data.index < 1 ? 'hidden' : ''">
 
-    <button
-            on="tap:AMP.setState({ data : {index: data.index + 3, loading: true}}),frmData.submit">
+        <button
+                on="tap:AMP.setState({ data : {index: data.index + 3, loading: true}}),frmData.submit">
         <span [text]="data.total - data.index > 3 ? '3 more':
                       data.total - data.index == 2 ? '2 more' :
                       '1 more'">3 more</span>
 
-    </button>
-  </div>
+        </button>
+    </div>
 
 </div>
 
