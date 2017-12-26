@@ -49,7 +49,38 @@ var products= [
             "id": 6,
             "index":6,
             "name": "Hai"
-        }
+        },
+    {
+        "id": 7,
+        "index":7,
+        "name": "Daniel",
+        "urlImage": "",
+    },
+    {
+        "id": 8,
+        "index":8,
+        "name": "Long"
+    },
+    {
+        "id": 9,
+        "index":9,
+        "name": "Mac"
+    },
+    {
+        "id": 10,
+        "index":10,
+        "name": "Thang"
+    },
+    {
+        "id": 11,
+        "index":11,
+        "name": "BaoAnh"
+    },
+    {
+        "id": 12,
+        "index":12,
+        "name": "Hai"
+    }
 ]
 
 var menu =[
